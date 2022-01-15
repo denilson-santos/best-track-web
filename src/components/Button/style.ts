@@ -18,6 +18,11 @@ export const Button = styled('button', {
           backgroundColor: '$main2',
           borderColor: '$blue8',
         },
+        '&:disabled': {
+          backgroundColor: '$blue8',
+          borderColor: '$blue8',
+          cursor: 'no-drop',
+        },
       },
       secondary: {
         backgroundColor: '$secondary',
@@ -28,6 +33,11 @@ export const Button = styled('button', {
         '&:hover': {
           backgroundColor: '$gray10',
           borderColor: '$gray8',
+        },
+        '&:disabled': {
+          backgroundColor: '$gray8',
+          borderColor: '$gray8',
+          cursor: 'no-drop',
         },
       },
       success: {
@@ -40,6 +50,11 @@ export const Button = styled('button', {
           backgroundColor: '$green10',
           borderColor: '$green8',
         },
+        '&:disabled': {
+          backgroundColor: '$green8',
+          borderColor: '$green8',
+          cursor: 'no-drop',
+        },
       },
       error: {
         backgroundColor: '$error',
@@ -50,6 +65,11 @@ export const Button = styled('button', {
         '&:hover': {
           backgroundColor: '$red10',
           borderColor: '$red8',
+        },
+        '&:disabled': {
+          backgroundColor: '$red8',
+          borderColor: '$red8',
+          cursor: 'no-drop',
         },
       },
       warning: {
@@ -62,6 +82,11 @@ export const Button = styled('button', {
           backgroundColor: '$yellow10',
           borderColor: '$yellow8',
         },
+        '&:disabled': {
+          backgroundColor: '$yellow8',
+          borderColor: '$yellow8',
+          cursor: 'no-drop',
+        },
       },
       info: {
         backgroundColor: '$info',
@@ -72,6 +97,27 @@ export const Button = styled('button', {
         '&:hover': {
           backgroundColor: '$sky10',
           borderColor: '$sky8',
+        },
+        '&:disabled': {
+          backgroundColor: '$sky8',
+          borderColor: '$sky8',
+          cursor: 'no-drop',
+        },
+      },
+      light: {
+        backgroundColor: '$whiteA12',
+        color: '$blackA12',
+        borderWidth: '$1',
+        borderStyle: 'solid',
+        borderColor: '$whiteA7',
+        '&:hover': {
+          backgroundColor: '$whiteA11',
+          borderColor: '$whiteA8',
+        },
+        '&:disabled': {
+          backgroundColor: '$whiteA8',
+          borderColor: '$whiteA8',
+          cursor: 'no-drop',
         },
       },
     },
@@ -101,6 +147,20 @@ export const Button = styled('button', {
           backgroundColor: 'transparent',
           borderColor: '$blue8',
           color: '$blue8',
+        },
+      },
+    },
+    withIcon: {
+      true: {
+        '.button-icon': {
+          marginLeft: '5px',
+          verticalAlign: 'middle',
+        },
+      },
+      noContent: {
+        '.button-icon': {
+          margin: '0',
+          verticalAlign: 'middle',
         },
       },
     },
@@ -180,5 +240,6 @@ export const Button = styled('button', {
   defaultVariants: {
     color: 'primary',
     size: 'md',
+    withIcon: 'false',
   },
 });

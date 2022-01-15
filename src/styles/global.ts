@@ -7,9 +7,8 @@ export const globalStyles = globalCss({
     boxSizing: 'border-box',
   },
   'html, body, #__next': {
-    height: '100%',
-    fontFamily:
-      '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
+    height: '100vh',
+    fontFamily: '$roboto',
   },
   a: {
     color: 'inherit',
