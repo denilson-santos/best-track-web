@@ -80,7 +80,7 @@ export const { styled, getCssText, globalCss, createTheme } = createStitches({
       info: '$sky9',
     },
     fonts: {
-      system: 'system-ui',
+      roboto: 'Roboto, sans-serif',
     },
     radii: {
       round: '50%',
