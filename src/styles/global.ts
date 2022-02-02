@@ -10,8 +10,16 @@ export const globalStyles = globalCss({
     height: '100vh',
     fontFamily: '$roboto',
   },
+  html: {
+    scrollBehavior: 'smooth',
+    scrollPaddingTop: '100px',
+  },
   a: {
     color: 'inherit',
     textDecoration: 'none',
+  },
+  input: {
+    outline: 'none',
+    border: 'none',
   },
 });

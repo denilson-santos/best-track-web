@@ -78,6 +78,7 @@ export const { styled, getCssText, globalCss, createTheme } = createStitches({
       error: '$red9',
       warning: '$yellow9',
       info: '$sky9',
+      light: '$whiteA12',
     },
     fonts: {
       roboto: 'Roboto, sans-serif',

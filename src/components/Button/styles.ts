@@ -1,6 +1,6 @@
 import { styled } from '../../../stitches.config';
 
-export const Button = styled('button', {
+export const Root = styled('button', {
   transition: 'background-color .2s',
   '&:not(:disabled)': {
     cursor: 'pointer',
@@ -137,6 +137,12 @@ export const Button = styled('button', {
         fontSize: '20px',
         borderRadius: '5px',
       },
+      full: {
+        width: '100%',
+        padding: '10px 16px',
+        fontSize: '18px',
+        borderRadius: '4px',
+      },
     },
     outlined: {
       true: {
@@ -233,6 +239,20 @@ export const Button = styled('button', {
           backgroundColor: 'transparent',
           borderColor: '$sky8',
           color: '$sky8',
+        },
+      },
+    },
+    {
+      color: 'light',
+      outlined: 'true',
+      css: {
+        backgroundColor: 'transparent',
+        borderColor: '$light',
+        color: '$light',
+        '&:hover': {
+          backgroundColor: 'transparent',
+          borderColor: '$whiteA11',
+          color: '$whiteA11',
         },
       },
     },
