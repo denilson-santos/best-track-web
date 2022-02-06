@@ -60,6 +60,9 @@ export const Container = styled('div', {
     },
 
     gap: {
+      0: {
+        gap: '0',
+      },
       1: {
         gap: '5px',
       },
@@ -99,8 +102,6 @@ export const Container = styled('div', {
 });
 
 export const Item = styled('div', {
-  paddingBottom: '15px',
-
   variants: {
     column: {
       1: {
@@ -140,5 +141,18 @@ export const Item = styled('div', {
         width: 'calc(100% / 1)',
       },
     },
+
+    noGutters: {
+      true: {
+        paddingBottom: '0',
+      },
+      false: {
+        paddingBottom: '15px',
+      },
+    },
+  },
+
+  defaultVariants: {
+    noGutters: 'false',
   },
 });
