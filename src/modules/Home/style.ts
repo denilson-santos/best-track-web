@@ -228,8 +228,8 @@ export const Section = styled('section', {
 
   '&.indicate-carrier-container': {
     backgroundColor: '$primary',
+    paddingBottom: '50px',
     marginBottom: '0',
-    // padding: '20px 0',
 
     'h2, p, label, input': {
       color: '$whiteA12',

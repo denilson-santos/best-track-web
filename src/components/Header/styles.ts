@@ -16,13 +16,19 @@ export const Root = styled('header', {
 
     transition: 'all .35s',
 
-    'a.active::before, a.active::after': {
-      width: '50%',
-      backgroundColor: '$primary',
-    },
+    a: {
+      '&::before, &::after': {
+        backgroundColor: '$primary',
+      },
 
-    'a:hover::before, a:hover::after': {
-      backgroundColor: '$primary',
+      '&:hover::before, &:hover::after': {
+        backgroundColor: '$primary',
+      },
+
+      '&.active::before, &.active::after': {
+        width: '50%',
+        backgroundColor: '$primary',
+      },
     },
   },
 
