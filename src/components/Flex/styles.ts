@@ -21,7 +21,7 @@ export const Container = styled('div', {
       row: {
         flexDirection: 'row',
       },
-      rowReverse: {
+      RowReverse: {
         flexDirection: 'row-reverse',
       },
     },
@@ -103,7 +103,7 @@ export const Container = styled('div', {
 
 export const Item = styled('div', {
   variants: {
-    column: {
+    col: {
       1: {
         width: 'calc(100% / 12)',
       },

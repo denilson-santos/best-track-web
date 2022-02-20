@@ -12,12 +12,28 @@ export const Hero = styled('section', {
   justifyContent: 'center',
 
   '& > div': {
-    width: '715px',
+    width: '100%',
+
+    '@sm': {
+      width: '100%',
+    },
+    '@lg': {
+      width: '715px',
+    },
   },
 
   h1: {
-    fontSize: '27px',
+    fontSize: '22px',
     fontWeight: '500',
+
+    '@sm': {
+      fontSize: '24px',
+      fontWeight: '500',
+    },
+    '@md': {
+      fontSize: '27px',
+      fontWeight: '500',
+    },
   },
 
   '.search-wrapper': {
@@ -53,9 +69,11 @@ export const Hero = styled('section', {
 
   '.last-trackings': {
     display: 'flex',
+    flexWrap: 'wrap',
+    gap: '5px',
 
     '& > span': {
-      marginRight: '5px',
+      lineHeight: '22px',
     },
     '.codes': {
       display: 'flex',
@@ -67,7 +85,7 @@ export const Hero = styled('section', {
         margin: '0 3px',
         border: '1px solid $whiteA12',
         borderRadius: '3px',
-        fontSize: '11px',
+        fontSize: '14px',
         fontWeight: '500',
 
         '&:hover': {
@@ -108,40 +126,45 @@ export const Section = styled('section', {
 
   '&.about-container': {
     '.about-wrapper': {
-      display: 'flex',
-      justifyContent: 'space-between',
-
-      '.about-content': {
-        width: '44%',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-      },
-
-      '.about-image': {
-        width: '34%',
-      },
-
       h3: {
         color: '$gray10',
-        fontSize: '35px',
-        fontWeight: '500',
         marginBottom: '40px',
+        fontSize: '26px',
+        fontWeight: '500',
+        textAlign: 'center',
+
+        '@sm': {
+          fontSize: '30px',
+          textAlign: 'left',
+        },
+        '@lg': {
+          fontSize: '35px',
+        },
       },
 
       p: {
         color: '$gray9',
+        marginBottom: '15px',
         fontSize: '18px',
         lineHeight: '25px',
         textIndent: '20px',
-        marginBottom: '15px',
+        textAlign: 'center',
+
+        '@sm': {
+          textAlign: 'left',
+        },
       },
 
       button: {
-        width: '180px',
+        width: '100%',
         height: '45px',
         fontSize: '16px',
         marginTop: '25px',
+        textAlign: 'center',
+
+        '@sm': {
+          width: '180px',
+        },
       },
     },
   },
@@ -152,15 +175,8 @@ export const Section = styled('section', {
     marginBottom: '0',
 
     '.features-items': {
-      display: 'flex',
-
       '.features-item': {
-        width: '33%',
         textAlign: 'center',
-      },
-
-      '.features-item + .features-item': {
-        marginLeft: '30px',
       },
 
       h4: {
@@ -248,7 +264,14 @@ export const Section = styled('section', {
     },
 
     '& > div': {
-      width: '630px',
+      width: '100%',
+
+      '@sm': {
+        width: '100%',
+      },
+      '@lg': {
+        width: '630px',
+      },
     },
   },
 });

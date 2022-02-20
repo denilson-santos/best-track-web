@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import logoWhite from '@public/images/logo-white.png';
@@ -14,10 +14,13 @@ type HeaderProps = React.ComponentProps<typeof Styles.Root> & {
 
 export const Header: React.FC<HeaderProps> = ({ className, ...rest }) => {
   const { menuActive, startScrolling } = useNavigation();
+  const [menuMobileOpened, setMenuMobileOpened] = useState(false);
 
   return (
     <Styles.Root
-      className={`main-header-container ${className ?? ''}`}
+      className={`main-header-container ${className ?? ''} ${
+        startScrolling ? 'scrolling' : 'scroll-initial'
+      } ${menuMobileOpened ? 'menu-mobile-opened' : ''}`}
       {...rest}
     >
       <Container>
@@ -25,6 +28,14 @@ export const Header: React.FC<HeaderProps> = ({ className, ...rest }) => {
           src={startScrolling ? logoBlue : logoWhite}
           width={172}
           height={52}
+        />
+
+        <input
+          type="checkbox"
+          id="menu_mobile_switch"
+          onClick={() => {
+            setMenuMobileOpened(!menuMobileOpened);
+          }}
         />
 
         <nav>
@@ -60,6 +71,15 @@ export const Header: React.FC<HeaderProps> = ({ className, ...rest }) => {
             </li>
           </ul>
         </nav>
+
+        <label
+          htmlFor="menu_mobile_switch"
+          className="menu-mobile-switch-wrapper"
+        >
+          <div className="icon icon-top" />
+          <div className="icon icon-middle" />
+          <div className="icon icon-bottom" />
+        </label>
       </Container>
     </Styles.Root>
   );

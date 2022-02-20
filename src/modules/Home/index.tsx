@@ -112,8 +112,25 @@ export const Home: React.FC = () => (
         <Styles.Section id="about" className="about-container">
           <h2>Sobre</h2>
 
-          <div className="about-wrapper">
-            <div className="about-content">
+          <Flex.Container
+            className="about-wrapper"
+            direction={{
+              '@initial': 'columnReverse',
+              '@lg': 'row',
+            }}
+            justifyContent="spaceBetween"
+            alignItems="center"
+            wrap
+            gap={0}
+          >
+            <Flex.Item
+              className="about-content"
+              col={{
+                '@md': 12,
+                '@lg': 7,
+                '@xl': 6,
+              }}
+            >
               <h3>O Seu Rastreador de Encomendas</h3>
 
               <p>
@@ -128,12 +145,15 @@ export const Home: React.FC = () => (
               </p>
 
               <Button size="lg">Transportadoras</Button>
-            </div>
+            </Flex.Item>
 
-            <div className="about-image">
+            <Flex.Item
+              className="about-image"
+              col={{ '@initial': 8, '@sm': 6, '@lg': 5, '@xl': 4 }}
+            >
               <Image src={aboutImage} objectFit="cover" />
-            </div>
-          </div>
+            </Flex.Item>
+          </Flex.Container>
         </Styles.Section>
       </Container>
 
@@ -166,8 +186,12 @@ export const Home: React.FC = () => (
 
       <Styles.Section id="features" className="features-container">
         <Container>
-          <div className="features-items">
-            <div className="features-item">
+          <Grid.Container
+            className="features-items"
+            cols={{ '@initial': 1, '@md': 2, '@lg': 3 }}
+            gap={5}
+          >
+            <Grid.Item className="features-item">
               <FaShippingFast color="var(--colors-whiteA12)" size={50} />
 
               <h4>X Transportadoras Integradas</h4>
@@ -177,9 +201,9 @@ export const Home: React.FC = () => (
                 integradas ao sistema da Best Track, proporcionando maior
                 variedade e abrangência ao rastrear.
               </p>
-            </div>
+            </Grid.Item>
 
-            <div className="features-item">
+            <Grid.Item className="features-item">
               <CgListTree color="var(--colors-whiteA12)" size={40} />
 
               <h4>Facilidade</h4>
@@ -190,9 +214,9 @@ export const Home: React.FC = () => (
                 Track e tenha todas a informações do seus produtos em um só
                 lugar.
               </p>
-            </div>
+            </Grid.Item>
 
-            <div className="features-item">
+            <Grid.Item className="features-item">
               <GoBell color="var(--colors-whiteA12)" size={40} />
 
               <h4>Notificações do Pedido</h4>
@@ -202,8 +226,8 @@ export const Home: React.FC = () => (
                 sempre que o status da sua encomenda for atualizado, melhorando
                 ainda mais o acompanhamento das suas entrega.
               </p>
-            </div>
-          </div>
+            </Grid.Item>
+          </Grid.Container>
         </Container>
       </Styles.Section>
 
@@ -238,7 +262,10 @@ export const Home: React.FC = () => (
         <Styles.Section id="carriers" className="carriers-container">
           <h2>Transportadoras</h2>
 
-          <Grid.Container columns={4} gap={4}>
+          <Grid.Container
+            cols={{ '@initial': 1, '@sm': 2, '@md': 3, '@lg': 4 }}
+            gap={4}
+          >
             <Grid.Item className="carriers-item">
               <Image src={aliexpressImage} objectFit="cover" layout="fill" />
 
@@ -391,27 +418,33 @@ export const Home: React.FC = () => (
           </p>
 
           <form>
-            <Flex.Container>
-              <Flex.Item column={6}>
+            <Flex.Container
+              wrap={{ '@initial': true, '@sm': false }}
+              gap={{ '@initial': 0, '@sm': 3 }}
+            >
+              <Flex.Item col={{ '@initial': 12, '@sm': 6 }}>
                 <Label htmlFor="name">Nome:</Label>
                 <Input id="name" placeholder="Digite o nome" outlined />
               </Flex.Item>
 
-              <Flex.Item column={6}>
+              <Flex.Item col={{ '@initial': 12, '@sm': 6 }}>
                 <Label htmlFor="name">Sobrenome:</Label>
                 <Input id="name" placeholder="Digite o sobrenome" outlined />
               </Flex.Item>
             </Flex.Container>
 
             <Flex.Container>
-              <Flex.Item column={12}>
+              <Flex.Item col={{ '@initial': 12 }}>
                 <Label htmlFor="email">Email:</Label>
                 <Input id="name" placeholder="Digite o email" outlined />
               </Flex.Item>
             </Flex.Container>
 
-            <Flex.Container>
-              <Flex.Item column={6}>
+            <Flex.Container
+              wrap={{ '@initial': true, '@sm': false }}
+              gap={{ '@initial': 0, '@sm': 3 }}
+            >
+              <Flex.Item col={{ '@initial': 12, '@sm': 6 }}>
                 <Label htmlFor="email">Nome da transportadora:</Label>
                 <Input
                   id="carrier_name"
@@ -420,7 +453,7 @@ export const Home: React.FC = () => (
                 />
               </Flex.Item>
 
-              <Flex.Item column={6}>
+              <Flex.Item col={{ '@initial': 12, '@sm': 6 }}>
                 <Label htmlFor="email">Site da transportadora:</Label>
                 <Input
                   id="carrier_info"
@@ -431,7 +464,7 @@ export const Home: React.FC = () => (
             </Flex.Container>
 
             <Flex.Container>
-              <Flex.Item column={12}>
+              <Flex.Item col={{ '@initial': 12 }}>
                 <Button color="light" size="full">
                   Enviar
                 </Button>

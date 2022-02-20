@@ -16,8 +16,21 @@ export const Footer: React.FC = () => {
     <Styles.Root>
       <div className="links">
         <Container>
-          <Flex.Container alignItems="center" className="link-items">
-            <Flex.Item column="3" className="logo-footer">
+          <Flex.Container
+            className="link-items"
+            alignItems="start"
+            justifyContent="center"
+            wrap
+            gap={0}
+          >
+            <Flex.Item
+              className="logo-footer link-item"
+              col={{
+                '@initial': 12,
+                '@sm': 6,
+                '@lg': 3,
+              }}
+            >
               <a href="#home">
                 <Image src={logoBlue} width={200} height={60} />
               </a>
@@ -27,83 +40,100 @@ export const Footer: React.FC = () => {
               </div>
             </Flex.Item>
 
-            <Flex.Item column="9" className="link-groups" noGutters>
-              <Flex.Container>
-                <Flex.Item column="4">
-                  <h3>Contato</h3>
+            <Flex.Item
+              className="link-groups link-item"
+              col={{
+                '@initial': 12,
+                '@sm': 6,
+                '@lg': 3,
+              }}
+            >
+              <h3>Contato</h3>
 
-                  <ul>
-                    <li>
-                      <i className="fas fa-phone-alt text-primary mr-2" />
-                      <FaPhoneAlt /> (77) 9999-9999
-                    </li>
+              <ul>
+                <li>
+                  <i className="fas fa-phone-alt text-primary mr-2" />
+                  <FaPhoneAlt /> (77) 9999-9999
+                </li>
 
-                    <li>
-                      <i className="fas fa-envelope text-primary mr-2" />
-                      <FaEnvelope /> contato@
-                      <span className="text-primary">besttrack.com.br</span>
-                    </li>
-                  </ul>
-                </Flex.Item>
+                <li>
+                  <i className="fas fa-envelope text-primary mr-2" />
+                  <FaEnvelope /> contato@
+                  <span className="text-primary">besttrack.com.br</span>
+                </li>
+              </ul>
+            </Flex.Item>
 
-                <Flex.Item column="4">
-                  <h3>Informações</h3>
+            <Flex.Item
+              className="link-groups link-item"
+              col={{
+                '@initial': 12,
+                '@sm': 6,
+                '@lg': 3,
+              }}
+            >
+              <h3>Informações</h3>
 
-                  <ul>
-                    <li>
-                      <a href="#">Termos de uso</a>
-                    </li>
-                    <li>
-                      <a href="#">Código de conduta</a>
-                    </li>
-                    <li>
-                      <a href="#">Privacidade</a>
-                    </li>
-                  </ul>
-                </Flex.Item>
+              <ul>
+                <li>
+                  <a href="#">Termos de uso</a>
+                </li>
+                <li>
+                  <a href="#">Código de conduta</a>
+                </li>
+                <li>
+                  <a href="#">Privacidade</a>
+                </li>
+              </ul>
+            </Flex.Item>
 
-                <Flex.Item column="4">
-                  <h3>Navegação</h3>
+            <Flex.Item
+              className="link-groups link-item"
+              col={{
+                '@initial': 12,
+                '@sm': 6,
+                '@lg': 3,
+              }}
+            >
+              <h3>Navegação</h3>
 
-                  <ul>
-                    {' '}
-                    <li>
-                      <a
-                        href="#home"
-                        className={menuActive === 'home' ? 'active' : ''}
-                      >
-                        Home
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#about"
-                        className={menuActive === 'about' ? 'active' : ''}
-                      >
-                        Sobre
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#carriers"
-                        className={menuActive === 'carriers' ? 'active' : ''}
-                      >
-                        Transportadoras
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#indicate-carrier"
-                        className={
-                          menuActive === 'indicate-carrier' ? 'active' : ''
-                        }
-                      >
-                        Indicar Transportadora
-                      </a>
-                    </li>
-                  </ul>
-                </Flex.Item>
-              </Flex.Container>
+              <ul>
+                {' '}
+                <li>
+                  <a
+                    href="#home"
+                    className={menuActive === 'home' ? 'active' : ''}
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    className={menuActive === 'about' ? 'active' : ''}
+                  >
+                    Sobre
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#carriers"
+                    className={menuActive === 'carriers' ? 'active' : ''}
+                  >
+                    Transportadoras
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#indicate-carrier"
+                    className={
+                      menuActive === 'indicate-carrier' ? 'active' : ''
+                    }
+                  >
+                    Indicar Transportadora
+                  </a>
+                </li>
+              </ul>
             </Flex.Item>
           </Flex.Container>
         </Container>
