@@ -11,7 +11,6 @@ export const NavigationContextProvider: React.FC = ({ children }) => {
   const [menuActive, setMenuActive] = useState('home');
 
   useEffect(() => {
-    const element = document.querySelector('.main-header-container');
     const sectionTitleHome = document
       .getElementById('home')
       ?.getBoundingClientRect();
@@ -60,14 +59,8 @@ export const NavigationContextProvider: React.FC = ({ children }) => {
 
       if (window.scrollY > 1 && !startScrolling) {
         setStartScrolling(true);
-
-        element?.classList.add('scrolling');
-        element?.classList.remove('scroll-initial');
       } else if (window.scrollY < 1 && startScrolling) {
         setStartScrolling(false);
-
-        element?.classList.add('scroll-initial');
-        element?.classList.remove('scrolling');
       }
     };
 

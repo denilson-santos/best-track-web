@@ -11,7 +11,7 @@ export const Container = styled('div', {
       },
     },
 
-    columns: {
+    cols: {
       1: {
         gridTemplateColumns: '1fr',
       },

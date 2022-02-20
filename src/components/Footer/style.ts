@@ -2,25 +2,25 @@ import { styled } from '../../../stitches.config';
 
 export const Root = styled('footer', {
   '.links': {
-    // padding: '20px 0 20px 0',
-    '& > div': {
-      height: '250px',
+    padding: '70px 0 50px 0',
 
+    '& > div': {
       '.link-items': {
-        height: 'inherit',
+        textAlign: 'center',
+
+        '@sm': {
+          textAlign: 'left',
+        },
 
         '.logo-footer, .link-groups': {
           color: '$blackA9',
-        },
-
-        '.logo-footer': {
-          paddingBottom: '50px',
         },
 
         '.link-groups h3': {
           color: '$gray10',
           fontSize: '19px',
           fontWeight: '400',
+          marginTop: '10px',
           marginBottom: '10px',
         },
 
