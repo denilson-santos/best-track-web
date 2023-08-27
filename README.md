@@ -4,34 +4,34 @@ O projeto consiste na construção de um sistema de rastreamento de encomendas n
 # Interface do Sistema:
 Abaixo estão algumas screenshots da plataforma.
 
-| Página Inicial - 1 |
+| Página Inicial - Início |
 | :- |
 | *Landing page da plataforma.* |
  
-![Página Inicial - 1](./public/screenshots/1.home.png)
+![Página Inicial - Início](./public/screenshots/1.home.png)
 <br>
 <br>
 
-| Página Inicial - 2 |
+| Página Inicial - Sobre |
 | :- |
 | *Landing page da plataforma.* |
  
-![Página Inicial - 2](./public/screenshots/2.home.png)
+![Página Inicial - Sobre](./public/screenshots/2.home.png)
 <br>
 <br>
 
-| Página Inicial - 3 |
+| Página Inicial - Transportadoras |
 | :- |
 | *Landing page da plataforma.* |
  
-![Página Inicial - 3](./public/screenshots/3.home.png)
+![Página Inicial - Transportadoras](./public/screenshots/3.home.png)
 <br>
 <br>
 
-| Página Inicial - 4 |
+| Página Inicial - Indicar Transportadora |
 | :- |
 | *Landing page da plataforma.* |
  
-![Página Inicial - 4](./public/screenshots/4.home.png)
+![Página Inicial - Indicar Transportadora](./public/screenshots/4.home.png)
 <br>
 <br>
